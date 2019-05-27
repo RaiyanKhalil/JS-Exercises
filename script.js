@@ -12,7 +12,7 @@ function sum(arr){
 
 console.log(sum([1, 2, 3, 4]))
 
-//Task 3: RegExp
+//Task 3: Email Validation with regex
 
 function validateEmail(email){
    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
