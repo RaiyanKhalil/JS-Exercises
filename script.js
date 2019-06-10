@@ -23,3 +23,35 @@ var checkEmail = validateEmail('1511081@iub.edu.bd');
 console.log(checkEmail);
 console.log(validateEmail('asdasdaddsada.com'));
 console.log(validateEmail('asd...3////'));
+
+//Task 4: Access object property at a scpecial index of array
+
+var library = [ 
+    {
+        author: 'Bill Gates',
+        title: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        author: 'Steve Jobs',
+        title: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        author: 'Suzanne Collins',
+        title:  'Mockingjay: The Final Book of The Hunger Games', 
+        readingStatus: false
+    }];
+    
+    function getProp(index, prop){
+        return library[index][prop]
+    }
+
+    console.log(getProp(1, 'author'))
+
+    function getReadingstatus(index){
+        return library[index].readingStatus;
+    }
+
+    console.log(getReadingstatus(1))
+
