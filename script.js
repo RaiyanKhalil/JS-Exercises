@@ -55,3 +55,75 @@ var library = [
 
     console.log(getReadingstatus(1))
 
+//Task 5a: Add a new item
+
+var cart = [ 
+    {
+        name: 'Shoes',
+        price: 560,
+        quantity: 4
+    },
+    {
+        name: 'Regular Tees',
+        price: 455.50,
+        quantity: 6
+    },
+    {
+        name: 'Socks',
+        price: 65.99,
+        quantity: 2
+    }];
+
+function addItem(newItem){
+    cart.push(newItem);
+
+}
+
+addItem({
+    name: 'Gloves',
+    price: 200,
+    quantity: 10
+})
+
+//Task 5b: Sort by a given property
+
+function sortCart(prop){
+    cart.sort(function(a, b){
+        if (a[prop] < b[prop]){
+            return -1;
+        }
+        if (a[prop] > b[prop]){
+            return 1;
+        }
+        return 0;
+    })
+}
+
+sortCart('quantity')
+console.log(cart)
+
+//Task 5c: Find Item by name
+
+findByName = function(name){
+var newArr =  cart.filter(function(item) {
+    return item.name == name;
+});
+
+console.log(newArr)
+}
+
+findByName("Gloves")
+findByName("Shoes")
+
+//Task 5d: Get total cost
+
+var totalCost = null
+
+function getTotalCost() {
+    cart.forEach(function(value, index, arry){
+        totalCost += value.price;
+       });
+}
+
+getTotalCost()
+console.log(totalCost)
